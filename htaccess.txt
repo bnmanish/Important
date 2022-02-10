@@ -1,0 +1,39 @@
+#HTACCESS CODE:
+
+##code to manipulate php value from .htaccess code
+
+php_value memory_limit 256M
+php_value post_max_size 256M
+php_value upload_max_filesize 64M
+php_value max_input_vars 1800
+php_value max_execution_time 300
+php_value max_input_time 300
+
+##code to manipulate php value from .htaccess code
+
+
+##code to remove public from url
+
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ /public/$1 [L,QSA]
+
+##code to remove public from url
+
+
+##code to redirect www with https
+
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTP_HOST} ^(.*)$  [NC]
+RewriteRule (.*) https://www.%1/$1 [R=301,L]
+
+##code to redirect www with https
+
+
+## Redirect to error pages
+
+RewriteCond %{REQUEST_URI} ^/404/$ [OR]
+RewriteCond %{REQUEST_URI} ^/500/$
+RewriteRule ^(.*)$ https://www.example.com/error-404 [L]
+
+## Redirect to error pages
