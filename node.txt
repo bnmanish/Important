@@ -1,0 +1,22 @@
+//Installation process of Node project with Express js with EJS engine
+##command to install:
+
+Step 1:
+$ npm init
+- it will create package.json file contaning project information.
+
+step 2:
+$ npm install express --save
+- to install express js framework with node js
+
+step 3:
+$ express --view=ejs
+- to install ejs engine to express js
+
+step 4:
+$ npm install
+- to install all dependencies.
+
+step 5:
+$ npm start
+- now your project is running on 3000 port (http://127.0.0.1:3000/)
