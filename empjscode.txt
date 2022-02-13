@@ -1,0 +1,28 @@
+//----------Dependent Drop down----------//
+<script>
+    $(document).ready(function(){
+        
+        $('#article').change(function(){
+
+            $('#shade').empty().append('<option value="">--Choose Shade--</option>');
+            var article = $(this).val();
+
+            $.ajax({
+                url: '{{route("get.shade.new.order")}}',
+                type: "GET",
+                data:{article:article},
+                success: function(response){
+                    console.log(response);
+
+                    $.each(response.shade,function(i,obj){
+                        
+                        var drpdata = "<option value="+obj.ID+">"+obj.Shade_Name+"</option>";
+                        $('#shade').append(drpdata);
+                    });
+                }
+            });
+
+        });
+    });
+</script>
+//----------Dependent Drop down----------//
