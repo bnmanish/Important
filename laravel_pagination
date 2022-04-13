@@ -1,0 +1,11 @@
+{{ $replies->render("pagination::default") }}
+Following commands will generate Pagination template in resources/views/vendor/pagination
+
+artisan vendor:publish --tag=laravel-pagination
+artisan vendor:publish
+In any view file (blade files) you can use those template like following ex:
+
+{{ $replies->render("pagination::default") }}
+{{ $replies->render("pagination::bootstrap-4") }}
+{{ $replies->render("pagination::simple-bootstrap-4") }}
+{{ $replies->render("pagination::semantic-ui") }}
