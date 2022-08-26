@@ -8,7 +8,7 @@ Print Session
 @endif
 
 --------------------------
-Print Validation Error
+Print Validation all Error
 -------------------------
 @if ($errors->any())
     @foreach ($errors->all() as $error)
@@ -18,3 +18,8 @@ Print Validation Error
     </div>
     @endforeach
 @endif
+
+------------------------------
+Print single validation error
+------------------------------
+{{ $errors->first('dob') }}
