@@ -22,4 +22,6 @@ Print Validation all Error
 ------------------------------
 Print single validation error
 ------------------------------
-{{ $errors->first('dob') }}
+@if($errors->first('name'))
+<p class="text-danger mb-0">{{ $errors->first('name') }}</p>
+@endif
