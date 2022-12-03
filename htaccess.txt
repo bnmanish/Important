@@ -39,7 +39,6 @@ RewriteRule ^(.*)$ https://www.example.com/error-404 [L]
 ## Redirect to error pages
 
 ##remove index.php from url
-
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
