@@ -29,3 +29,17 @@ function nlevelcat($parent_id,$level = Null, $prefix = '') {
     }
     return $category;
 }
+
+//-------------------------------------------------------------
+Route group
+------------
+Route::group(['prefix' => 'post'], function(){
+    Route::get('all','Controller@post');
+    Route::get('user','Controller@post');
+})
+
+Route::group(['prefix' => 'post', 'middleware' => ['auth']], function(){
+        Route::get('all','Controller@post');
+        Route::get('user','Controller@post');
+    })
+-------------------------------------------------------------------
