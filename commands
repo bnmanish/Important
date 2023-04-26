@@ -1,0 +1,10 @@
+*restart apache
+	sudo service apache2 restart
+*disable apache php version
+	sudo a2dismod php5
+*enable apache php version
+	sudo a2enmod php7.0
+*List all the php version installed on system
+	list php versions  :  sudo update-alternatives --config php
+*install php with apachec
+	install php with apache : sudo apt-get install php7.2 php7.2-fpm php7.2-mysql libapache2-mod-php7.2 libapache2-mod-fcgid -y
