@@ -26,3 +26,9 @@
     });
 </script>
 //----------Dependent Drop down----------//
+===================================================================================================================
+// /*----------- 00. Right Click Disable ----------*/
+window.addEventListener('contextmenu', function (e) {
+    // alert('right click disabled!');
+    e.preventDefault();
+}, false);
